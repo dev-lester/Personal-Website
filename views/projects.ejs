@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheets/style.css">
     <title>Lester Sales</title>
 </head>
@@ -12,7 +14,82 @@
     <main class="page-content" aria-label="Content">
         <%- include ("./partials/header") %>
         <div class="content">
-            <h1>Hello this is project section</h1>
+            <h2>Software Repository</h2>
+            <table class="table">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Language</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="http://" target="_blank" rel="noopener noreferrer">Smart Egg-Incubator</a></td>
+                    <td>SMEGGI (Smart Egg-Incubator) for Poultries and Gamefowl</td>
+                    <td>C</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://" target="_blank" rel="noopener noreferrer">Twitter Bot</a> </td>
+                    <td>Twitter Bot that automatically DM every users who follows me and analyze data.</td>
+                    <td>JavaScript</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://" target="_blank" rel="noopener noreferrer">Angular CRUD Application</a> </td>
+                    <td>Created a web based CRUD Application in Firebase and Angular</td>
+                    <td>TypeScript</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://" target="_blank" rel="noopener noreferrer">Weather App</a> </td>
+                    <td>A simple web based weather App using Open weather API</td>
+                    <td>JavaScript</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://" target="_blank" rel="noopener noreferrer">Weather App</a> </td>
+                    <td>A simple online store using Angular and Firebase with user Authentication and Authorazation</td>
+                    <td>TypeScript</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+        <div class="content">
+            <h1>Technology Stack</h1>
+            <p>MY WEBSITE ARCHITECTURE</p>
+            <div>
+                <div>
+                    <h3>Front-End</h3>
+                    <h6>REACT + BOOTSTRAP</h6>
+                    <ul>
+                        <li>Single page Web apps written in create-react-app</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Backend Servers (non CPU-bound)</h3>
+                    <h6>NODEJS + EXPRESS</h6>
+                    <ul>
+                        <li>Express app for each service.</li>
+                        <li>Single thread event-driven architecture, good for simple services that are mostly waiting on I/O.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Database</h3>
+                    <h6>MONGODB + MONGOOSE</h6>
+                    <ul>
+                        <li>Storage for JWT identity and content.</li>
+                        <li>Mongoose is an object data modeling (ODM) library that provides a rigorous modeling environment for your data, enforcing structure as needed while still maintaining the flexibility that makes MongoDB powerful.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Deployment</h3>
+                    <h6>NETLIFY</h6>
+                    <ul>
+                        <li>Netlify is a San Francisco-based cloud computing company that offers hosting and serverless backend services for web applications and static websites.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </main>
 

@@ -1,6 +1,8 @@
+
 a {
-    background-color: transparent ;
+    background-color: transparent;
 }
+
 body {
     padding: 20px;
     font-family: 'Lato', sans-serif;
@@ -64,7 +66,8 @@ h1 {
     display: block;
 }
 
-.pure-menu-heading, .pure-menu-link {
+.pure-menu-heading,
+.pure-menu-link {
     text-decoration: none;
     white-space: nowrap;
 }
