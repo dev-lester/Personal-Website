@@ -1,10 +1,16 @@
+const Writing = require('../models/Writings');// Import models
+
+
+
+
 // @desc get all writings
 // @route GET /api/writings
 // @access Public
-exports.getWritings = (req, res, next) => {
+exports.getWritings = async (req, res, next) => {
+    const writings = await Writing.find();
     res.status(200).json({
         success: true,
-        msg: `Get all writings`
+        data: writings
     });
 }
 
@@ -21,10 +27,12 @@ exports.getWriting = (req, res, next) => {
 // @desc create new writing
 // @route POST /api/writings
 // @access Private
-exports.createWriting = (req, res, next) => {
-    res.status(200).json({
+exports.createWriting = async (req, res, next) => {
+    const writing = await Writing.create(req.body);
+    
+    res.status(201).json({
         success: true,
-        msg: `Create new writings`
+        data: writing
     });
 }
 
