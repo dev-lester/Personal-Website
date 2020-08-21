@@ -8,7 +8,11 @@ const WritingSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    content: String,
+    description: String,
+    content: {
+        type: String,
+        required: true
+    },
     createdAt: {type: Date, default: Date.now}
 });
 

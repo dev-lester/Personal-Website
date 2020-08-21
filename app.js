@@ -30,6 +30,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.json());
 
+
 // load static files
 app.use(express.static(path.join(__dirname, '/public')));
 
