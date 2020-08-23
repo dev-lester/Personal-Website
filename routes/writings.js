@@ -14,6 +14,12 @@ router
     .get(getWritings)
     .post(createWriting);
 
+
+router
+    .route('/create')
+    .get(createWriting)
+
+
 router
     .route('/:id')
     .get(getWriting)

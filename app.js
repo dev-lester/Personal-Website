@@ -16,31 +16,30 @@ connectDB();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Route files
-const writings = require('./routes/writings');
-
-
-// Load view engine
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
 // Use body parser
 app.use(bodyParser.urlencoded({
     extended: false
 }));
 app.use(express.json());
 
+// Route files
+const home = require('./routes/home');
+const writings = require('./routes/writings');
+const projects = require('./routes/projects');
+
+
+// Load view engine
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 // load static files
 app.use(express.static(path.join(__dirname, '/public')));
 
 // mount routers
-app.use('/api/writings', writings);
-
-// home route
-app.get('/' , (req, res) => {
-    res.render('index');
-});
+app.use('/', home);
+app.use('/writings', writings);
+// app.use('/create', create);
+app.use('/projects', projects);
 
 
 

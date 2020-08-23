@@ -18,7 +18,7 @@ exports.getWritings = async (req, res, next) => {
                 writings: writings
             });
         }
-    });
+    }).sort({ createdAt: 'desc' });
 }
 
 // @desc get single writing
@@ -30,32 +30,30 @@ exports.getWriting = async (req, res, next) => {
         success: true,
         data: getWritingById
     });
-}
+    }
 
 // @desc create new writing
 // @route POST /api/writings
 // @access Private
+// exports.createWriting = async (req, res, next) => {
+//     res.render('create');
+// }
 exports.createWriting = async (req, res, next) => {
-    let writing = new Writing({
+    res.render('create');
+    let createWriting = new Writing({
         title: req.body.title,
         description: req.body.description,
         content: req.body.content
     });
     try {
-        writing = await writing.save();
-        res.redirect(this.getWritings, writing._id);
+        createWriting = await createWriting.save();
+        res.redirect(`/writings/${getWriting.id}`); 
     } catch (error) {
         console.log(error);
-        res.render(this.getWritings, {
-            writing: writing
-        });
+        res.render('/writings/create',{createWriting: createWriting });
     }
-    // const createWriting = await Writing.create(req.body);
-    // res.status(201).json({
-    //     success: true,
-    //     data: createWriting
-    // });
 }
+
 
 // @desc update writing
 // @route PUT /api/writings/:id

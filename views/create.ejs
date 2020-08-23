@@ -1,0 +1,23 @@
+<%- include ("./partials/head") %>
+<main class="page-content" aria-label="Content">
+    <div class="content">
+        <h1>What's on your mind?</h1>
+        <form action="/writings" method="POST">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input required value="" type="text" name="title" id="title" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea name="description" id="description" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="content">Content</label>
+                <textarea required name="content" id="content" class="form-control"></textarea>
+            </div>
+
+            <a href="/writings" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+</main>
