@@ -4,21 +4,21 @@ const {
     getWriting,
     createWriting,
     updateWriting,
-    deleteWriting
+    deleteWriting,
+    renderCreateWriting
 } = require('../controllers/writings');
 
 const router = express.Router();
 
 router
     .route('/')
-    .get(getWritings)
-    .post(createWriting);
-
+    .get(getWritings);
+    // .post(createWriting);    
 
 router
     .route('/create')
-    .get(createWriting)
-
+    .get(renderCreateWriting)
+    .post(createWriting);    
 
 router
     .route('/:id')
