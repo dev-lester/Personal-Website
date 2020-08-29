@@ -3,18 +3,17 @@
     <main class="page-content" aria-label="Content">
         <%- include ("./partials/header") %>
         <div class="content">
-            <h2>Writing</h2>
+            <h3>Writing</h3>
             <a href="/writings/create" class="btn btn-success">Create new</a>
             <div>
                 <% writings.forEach(writing => { %>
                     <div class="mt-4">
                         <div class="card-body">
-                            <h4 class="card-title"><%- writing.title %></h4>
+                            <h4 class="card-title"><a href="/writings/<%- writing.id %>"><%- writing.title %></a></h4>
                             <div class="card-subtitle text-muted mb-2">
                                 <%- writing.createdAt.toDateString() %>
                             </div>
                             <hr>
-                            <div class="card-text mb-2"><h5><%- writing.description%></h5></div>
                             <div class="card-text mb-2"><%- writing.content%></div>
                         </div>
                     </div>

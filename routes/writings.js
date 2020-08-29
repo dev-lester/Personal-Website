@@ -5,15 +5,16 @@ const {
     createWriting,
     updateWriting,
     deleteWriting,
-    renderCreateWriting
+    renderCreateWriting,
+    renderUpdateWriting
 } = require('../controllers/writings');
 
 const router = express.Router();
 
 router
     .route('/')
-    .get(getWritings);
-    // .post(createWriting);    
+    .get(getWritings)
+    .post(createWriting);    
 
 router
     .route('/create')
@@ -26,6 +27,9 @@ router
     .put(updateWriting)
     .delete(deleteWriting);
 
-
+router
+    .route('/edit/:id')
+    .get(renderUpdateWriting)
+    .put(updateWriting);
 
 module.exports = router;

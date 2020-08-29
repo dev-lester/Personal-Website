@@ -1,17 +1,14 @@
-
 a {
     background-color: transparent;
 }
 
 body {
     padding: 20px;
-    font-family: 'Lato', sans-serif;
+    font-family: Roboto Mono, monospace;
     font-size: 16px;
-}
-
-body {
     margin: 0;
     display: block;
+    color: #000;
 }
 
 .content {
@@ -49,7 +46,7 @@ h1 {
     margin-block-end: 0.67em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 .pure-menu-horizontal.pure-menu-scrollable {
@@ -73,20 +70,40 @@ h1 {
 }
 
 a {
-    color: #258cdb;
+    color: #2598db;
     text-decoration: none;
+}
+
+.pup {
+    text-decoration: none;
+    color: #db2525;
 }
 
 .pure-menu-item {
     display: inline-block;
+    width: 100px;
+    border: 2px solid #96979c;
+    border-radius: 25px;
+    color: #96979c;
+    font-size: 1rem;
+    transition: 0.4s ease all;
+
 }
 
 .pure-menu-item:hover {
-    background-color: rgb(212, 212, 212);
+    background-color: rgb(224, 224, 224);
 }
 
-.pure-menu-item a:hover {
+.one a:hover {
     color: rgb(46, 226, 64);
+}
+
+.two a:hover {
+    color: rgb(214, 226, 46);
+}
+
+.three a:hover {
+    color: rgb(226, 46, 202);
 }
 
 .pure-menu-list {

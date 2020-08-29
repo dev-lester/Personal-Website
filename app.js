@@ -4,6 +4,8 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const morgan = require('morgan'); // Library for HTTP request logger middleware.
 const connectDB = require('./config/db');
+const methodOverride = require('method-override');
+
 
 // dotenv config
 dotenv.config({
@@ -21,6 +23,7 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 app.use(express.json());
+app.use(methodOverride('_method'));
 
 // Route files
 const home = require('./routes/home');
@@ -38,7 +41,6 @@ app.use(express.static(path.join(__dirname, '/public')));
 // mount routers
 app.use('/', home);
 app.use('/writings', writings);
-// app.use('/create', create);
 app.use('/projects', projects);
 
 
