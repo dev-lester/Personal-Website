@@ -23,6 +23,7 @@ exports.getWritings = async (req, res, next) => {
     });
 }
 
+
 // @desc get single writing
 // @route GET /api/writings/:id
 // @access Public
@@ -33,6 +34,7 @@ exports.getWriting = async (req, res, next) => {
         });
     });
 }
+
 
 // @desc create new writing
 // @route POST /api/writings
@@ -60,17 +62,33 @@ exports.createWriting = async (req, res, next) => {
 // @desc update writing
 // @route PUT /api/writings/:id
 // @access Private
-exports.renderUpdateWriting = async (req, res, next) => {
-    res.render('edit');
+exports.getUpdatetWriting = async (req, res, next) => {
+    await Writing.findById(req.params.id, (err, writing) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('edit', {
+                writing: writing
+            });
+        }
+    });
 }
 
 exports.updateWriting = async (req, res, next) => {
-    const updateWritingbyId = await Writing.findByIdAndUpdate(req.params.id, req.body)
-    res.status(200).json({
-        success: true,
-        data: updateWritingbyId
+    const updateWriting = {
+        title: req.body.title,
+        description: req.body.description,
+        content: req.body.content
+    }
+    await Writing.findByIdAndUpdate(req.params.id, updateWriting, (err) => {
+        if (err) {
+            res.redirect('edit' + req.params.id);
+        } else {
+            res.redirect('/writings/' + req.params.id);
+        }
     });
 }
+
 
 // @desc delete single writing
 // @route DELETE /api/writings/:id

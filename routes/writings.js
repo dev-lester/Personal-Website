@@ -6,7 +6,7 @@ const {
     updateWriting,
     deleteWriting,
     renderCreateWriting,
-    renderUpdateWriting
+    getUpdatetWriting
 } = require('../controllers/writings');
 
 const router = express.Router();
@@ -29,7 +29,7 @@ router
 
 router
     .route('/edit/:id')
-    .get(renderUpdateWriting)
+    .get(getUpdatetWriting)
     .put(updateWriting);
 
 module.exports = router;
