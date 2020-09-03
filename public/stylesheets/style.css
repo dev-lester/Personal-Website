@@ -49,6 +49,10 @@ h1 {
     font-weight: 400;
 }
 
+.writing-title a {
+    color: #000;
+}
+
 .pure-menu-horizontal.pure-menu-scrollable {
     white-space: nowrap;
     overflow-y: hidden;
@@ -111,3 +115,4 @@ a {
     margin: 0;
     padding: 0;
 }
+
