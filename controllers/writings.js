@@ -1,8 +1,6 @@
 const Writing = require('../models/Writings'); // Import models
 
 
-
-
 // @desc get all writings
 // @route GET /api/writings
 // @access Public
@@ -53,6 +51,7 @@ exports.createWriting = async (req, res, next) => {
         if (err) {
             console.log(err);
         } else {
+            req.flash('success', 'Added new blog!');
             res.redirect('/writings');
         }
     });
@@ -84,6 +83,7 @@ exports.updateWriting = async (req, res, next) => {
         if (err) {
             res.redirect('edit' + req.params.id);
         } else {
+            req.flash('success', 'Blog updated!');
             res.redirect('/writings/' + req.params.id);
         }
     });
