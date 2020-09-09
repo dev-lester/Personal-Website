@@ -1,4 +1,5 @@
 const express = require('express');
+const router = express.Router();
 const {
     getWritings,
     getWriting,
@@ -9,7 +10,6 @@ const {
     getUpdatetWriting
 } = require('../controllers/writings');
 
-const router = express.Router();
 
 router
     .route('/')

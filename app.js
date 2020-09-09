@@ -32,6 +32,7 @@ app.use(methodOverride('_method'));
 const home = require('./routes/home');
 const writings = require('./routes/writings');
 const projects = require('./routes/projects');
+const user = require('./routes/user');
 
 
 // Load view engine
@@ -77,6 +78,7 @@ app.use(expressValidator({
 app.use('/', home);
 app.use('/writings', writings);
 app.use('/projects', projects);
+app.use('/user', user);
 
 // Handle unhandled promise rejections 
 const server = app.listen(PORT, () => {
