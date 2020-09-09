@@ -27,9 +27,13 @@ exports.getWritings = async (req, res, next) => {
 // @access Public
 exports.getWriting = async (req, res, next) => {
     await Writing.findById(req.params.id, (err, writing) => {
-        res.render('single-writing', {
-            writing: writing
-        });
+        if (writing == null) {
+            res.redirect('/writings');
+        } else {
+            res.render('single-writing', {
+                writing: writing
+            });
+        }
     });
 }
 

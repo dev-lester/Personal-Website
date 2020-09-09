@@ -33,6 +33,7 @@ const home = require('./routes/home');
 const writings = require('./routes/writings');
 const projects = require('./routes/projects');
 const user = require('./routes/user');
+const errorPage = require('./routes/404'); // 404 page
 
 
 // Load view engine
@@ -79,6 +80,7 @@ app.use('/', home);
 app.use('/writings', writings);
 app.use('/projects', projects);
 app.use('/user', user);
+app.use('*', errorPage); // 404 page
 
 // Handle unhandled promise rejections 
 const server = app.listen(PORT, () => {
@@ -87,7 +89,6 @@ const server = app.listen(PORT, () => {
 
 process.on('unhandledRejection', (err, promise) => {
     console.log(`Error: ${err.message}`);
-    // CLose server and exit process
-    server.close(() => process.exit(1));
+    // server.close(() => process.exit(1));
+    console.log(`Server is running in ${process.env.NODE_ENV} mode port ${PORT}`);
 });
-// Stop the server from running 
