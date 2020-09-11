@@ -1,0 +1,22 @@
+<%- include ("./partials/head") %>
+<body class="text-center">
+    <form class="form-signin">
+        <%- messages('messages', locals) %>
+        <img class="mb-4" src="https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif" alt="" width="120" height="120">
+        <h1 class="h3 mb-3 font-weight-normal">Welcome Blogger!</h1>
+        <label for="username" class="sr-only">Username</label>
+        <input type="text" id="username" class="form-control" placeholder="Username" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <button class="mb-4 btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <div>
+            <p>Don't have an account? <a href="/user/register">Sign Up</a></p>
+        </div>
+        <p class="mt-5 mb-3 text-muted">&copy; made with ❤️</p>
+    </form>
+</body>

@@ -30,12 +30,12 @@ div {
     border-radius: 50%;
 }
 
-.me404 {
+#me404 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
     max-width: 100%;
+    border-radius: 0%;
 }
 
 img {

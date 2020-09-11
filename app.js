@@ -32,8 +32,9 @@ app.use(methodOverride('_method'));
 const home = require('./routes/home');
 const writings = require('./routes/writings');
 const projects = require('./routes/projects');
-const user = require('./routes/user');
+const userRegister = require('./routes/user');
 const errorPage = require('./routes/404'); // 404 page
+const userLogin = require('./routes/login');
 
 
 // Load view engine
@@ -79,7 +80,8 @@ app.use(expressValidator({
 app.use('/', home);
 app.use('/writings', writings);
 app.use('/projects', projects);
-app.use('/user', user);
+app.use('/user', userRegister);
+app.use('/user', userLogin);
 app.use('*', errorPage); // 404 page
 
 // Handle unhandled promise rejections 

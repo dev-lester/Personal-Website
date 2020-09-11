@@ -99,5 +99,6 @@ exports.updateWriting = async (req, res, next) => {
 // @access Private
 exports.deleteWriting = async (req, res, next) => {
     await Writing.findByIdAndDelete(req.params.id);
+    req.flash('danger', ` id: ${req.params.id} Deleted`);
     res.redirect('/writings');
 }

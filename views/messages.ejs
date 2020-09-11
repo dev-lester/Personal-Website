@@ -1,6 +1,6 @@
 <div id="messages">
     <% Object.keys(messages).forEach(function(type) { %>
-    <div class="alert alert-success" + <%- type %> ">
+    <div class="alert alert-success">
         <% messages[type].forEach(function(message) { %>
             <%- message %>
         <% }) %>

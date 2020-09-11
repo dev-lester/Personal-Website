@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
     "dompurify": "^2.0.14",
     "dotenv": "^8.2.0",
@@ -23,6 +24,8 @@
     "method-override": "^3.0.0",
     "mongoose": "^5.10.0",
     "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "slugify": "^1.4.5"
   }
 }
