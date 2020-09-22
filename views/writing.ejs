@@ -3,24 +3,29 @@
     <main class="page-content" aria-label="Content">
         <%- include ("./partials/header") %>
         <div class="content">
+            <%- messages('messages', locals) %>
             <h3>Writing</h3>
             <a href="/writings/create" class="btn btn-success">Create new</a>
             <div>
                 <% writings.forEach(writing => { %>
                     <div class="mt-4">
                         <div class="card-body">
-                            <h4 class="card-title"><a href="/writings/<%- writing.id %>"><%- writing.title %></a></h4>
-                            <div class="card-subtitle text-muted mb-2">
+                            <h4 class="card-title writing-title"><a href="/writings/<%- writing.id %>"><%- writing.title %></a></h4>
+                            <span class="css-nani text-muted mb-2">
                                 <%- writing.createdAt.toDateString() %>
-                            </div>
+                            </span>
                             <hr>
-                            <div class="card-text mb-2"><%- writing.content%></div>
+                            <div class="card-text mb-2">
+                                <%- writing.content.substring(0, 180) + "..."%>
+                            </div>
                         </div>
                     </div>
                 <% }) %>
             </div>
         </div>
     </main>
+    <br>
+    <br>
     <%- include ("./partials/footer") %>
 </body>
 

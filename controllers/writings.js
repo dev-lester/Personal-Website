@@ -1,8 +1,6 @@
 const Writing = require('../models/Writings'); // Import models
 
 
-
-
 // @desc get all writings
 // @route GET /api/writings
 // @access Public
@@ -29,9 +27,13 @@ exports.getWritings = async (req, res, next) => {
 // @access Public
 exports.getWriting = async (req, res, next) => {
     await Writing.findById(req.params.id, (err, writing) => {
-        res.render('single-writing', {
-            writing: writing
-        });
+        if (writing == null) {
+            res.redirect('/writings');
+        } else {
+            res.render('single-writing', {
+                writing: writing
+            });
+        }
     });
 }
 
@@ -53,6 +55,7 @@ exports.createWriting = async (req, res, next) => {
         if (err) {
             console.log(err);
         } else {
+            req.flash('success', 'Added new blog!');
             res.redirect('/writings');
         }
     });
@@ -84,6 +87,7 @@ exports.updateWriting = async (req, res, next) => {
         if (err) {
             res.redirect('edit' + req.params.id);
         } else {
+            req.flash('success', 'Blog updated!');
             res.redirect('/writings/' + req.params.id);
         }
     });
@@ -95,5 +99,6 @@ exports.updateWriting = async (req, res, next) => {
 // @access Private
 exports.deleteWriting = async (req, res, next) => {
     await Writing.findByIdAndDelete(req.params.id);
+    req.flash('danger', ` id: ${req.params.id} Deleted`);
     res.redirect('/writings');
 }

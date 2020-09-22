@@ -5,6 +5,9 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan'); // Library for HTTP request logger middleware.
 const connectDB = require('./config/db');
 const methodOverride = require('method-override');
+const expressValidator = require('express-validator');
+const flash = require('connect-flash');
+const session = require('express-session');
 
 
 // dotenv config
@@ -29,6 +32,9 @@ app.use(methodOverride('_method'));
 const home = require('./routes/home');
 const writings = require('./routes/writings');
 const projects = require('./routes/projects');
+const userRegister = require('./routes/user');
+const errorPage = require('./routes/404'); // 404 page
+const userLogin = require('./routes/login');
 
 
 // Load view engine
@@ -38,16 +44,45 @@ app.set('view engine', 'ejs');
 // load static files
 app.use(express.static(path.join(__dirname, '/public')));
 
+// express session middleware
+app.use(session({
+    secret: 'keyboard cat',
+    resave: true,
+    saveUninitialized: true,
+}));
+
+// express middleware
+app.use(require('connect-flash')());
+app.use(function (req, res, next) {
+    res.locals.messages = require('express-messages')(req, res);
+    next();
+});
+
+// express validator middleware
+app.use(expressValidator({
+    errorForamatter: function(params, msg, value) {
+        var namespace = param.split('.')
+        , root = namespace.shift()
+        , formParam = root;
+
+        while(namespace.length) {
+            formParam += '[' + namespace.shift() + ']';
+        }
+        return {
+            param : formParam,
+            msg : msg,
+            value: value
+        };
+    }
+}));
+
 // mount routers
 app.use('/', home);
 app.use('/writings', writings);
 app.use('/projects', projects);
-
-
-
-
-
-
+app.use('/user', userRegister);
+app.use('/user', userLogin);
+app.use('*', errorPage); // 404 page
 
 // Handle unhandled promise rejections 
 const server = app.listen(PORT, () => {
@@ -56,7 +91,6 @@ const server = app.listen(PORT, () => {
 
 process.on('unhandledRejection', (err, promise) => {
     console.log(`Error: ${err.message}`);
-    // CLose server and exit process
-    server.close(() => process.exit(1));
+    // server.close(() => process.exit(1));
+    console.log(`Server is running in ${process.env.NODE_ENV} mode port ${PORT}`);
 });
-// Stop the server from running 

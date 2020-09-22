@@ -30,6 +30,14 @@ div {
     border-radius: 50%;
 }
 
+#me404 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    border-radius: 0%;
+}
+
 img {
     border: 0;
 }
@@ -47,6 +55,10 @@ h1 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: 400;
+}
+
+.writing-title a {
+    color: #000;
 }
 
 .pure-menu-horizontal.pure-menu-scrollable {
@@ -111,3 +123,4 @@ a {
     margin: 0;
     padding: 0;
 }
+
