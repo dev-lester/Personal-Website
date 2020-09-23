@@ -104,10 +104,6 @@ a {
     font-size: 1rem;
 }
 
-.pure-menu-item:hover {
-    background-color: rgb(224, 224, 224);
-}
-
 .one a:hover {
     color: rgb(46, 226, 64);
 }
