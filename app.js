@@ -8,6 +8,7 @@ const methodOverride = require('method-override');
 const expressValidator = require('express-validator');
 const flash = require('connect-flash');
 const session = require('express-session');
+const passport = require('passport');
 
 
 // dotenv config
@@ -75,6 +76,19 @@ app.use(expressValidator({
         };
     }
 }));
+
+// passport config
+require('./config/passport')(passport);
+
+// passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+// global variables for login/logout
+app.get('*', (req, res, next) => {
+    res.locals.user = req.user || null;
+    next();
+});
 
 // mount routers
 app.use('/', home);
