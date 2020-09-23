@@ -12,9 +12,11 @@
                     </div>
                     <hr>
                     <div class="card-text mb-2"><%- writing.content%></div>
-                    <a href="/writings/edit/<%- writing.id %>" class="btn btn-secondary">Edit</a>
-                    <form action="/writings/<%- writing.id %>?_method=DELETE" method="post" class="d-inline">
-                    <button type="submit" class="btn btn-danger">Delete</button></form>
+                    <% if (user) { %>
+                        <a href="/writings/edit/<%- writing.id %>" class="btn btn-secondary">Edit</a>
+                        <form action="/writings/<%- writing.id %>?_method=DELETE" method="post" class="d-inline">
+                        <button type="submit" class="btn btn-danger">Delete</button></form>
+                    <% } %>
                 </div>
             </div>
         </div>
