@@ -7,29 +7,31 @@ const {
     updateWriting,
     deleteWriting,
     renderCreateWriting,
-    getUpdatetWriting
+    getUpdatetWriting,
+    ensureAuthenticated
 } = require('../controllers/writings');
-
 
 router
     .route('/')
     .get(getWritings)
-    .post(createWriting);    
+    // .post(createWriting, ensureAuthenticated);    
 
 router
     .route('/create')
-    .get(renderCreateWriting)
-    .post(createWriting);    
+    .get(ensureAuthenticated, renderCreateWriting)
+    .post(ensureAuthenticated, createWriting);    
 
 router
     .route('/:id')
     .get(getWriting)
-    .put(updateWriting)
-    .delete(deleteWriting);
+    .put(ensureAuthenticated ,updateWriting)
+    .delete(ensureAuthenticated, deleteWriting);
 
 router
     .route('/edit/:id')
-    .get(getUpdatetWriting)
-    .put(updateWriting);
+    .get(ensureAuthenticated, getUpdatetWriting)
+    .put(ensureAuthenticated, updateWriting);
 
 module.exports = router;
+
+

@@ -1,6 +1,5 @@
 const Writing = require('../models/Writings'); // Import models
 
-
 // @desc get all writings
 // @route GET /api/writings
 // @access Public
@@ -101,4 +100,14 @@ exports.deleteWriting = async (req, res, next) => {
     await Writing.findByIdAndDelete(req.params.id);
     req.flash('danger', ` id: ${req.params.id} Deleted`);
     res.redirect('/writings');
+}
+
+    // Access control
+exports.ensureAuthenticated = async (req, res, next) => {
+    if (req.isAuthenticated()) {
+        return next();
+    } else {
+        req.flash('danger', 'You are not authorized by boss lester');
+        res.redirect('/');
+    }
 }
