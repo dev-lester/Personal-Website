@@ -1,56 +1,44 @@
 <%- include ("./partials/head") %>
 <body>
-    <main class="page-content" aria-label="Content">
-        <%- include ("./partials/header") %>
-        <div class="content">
-            <%- messages('messages', locals) %>
-            <h3>Hello World!👋</h3>
-            <p>
-                Welcome to my site. I'm Lester, I graduated from <a class="pup" href="https://www.pup.edu.ph/">Polytechnic University of the
-                Philippines</a>  in 2019 with a degree in Diploma in Computer Engineering Technology. In the
-                past few years I have worked on many independent projects alongside my formal education. My goal is to
-                develop innovative solutions in Tech industries through my combined software and hardware experience.
-                I have advanced knowledge in Python and C, experience designing custom electronic
-                circuits/microcontrollers,
-                as well as building this website using responsive web technologies.
-            </p>
-
-            <h3>Why do you blog?🤷‍♂️</h3>
-            <p>
-                Mostly for selfish reasons. I needed a way to keep track of software development over time – whatever I
-                am thinking about or working on. I research things I find interesting, then document my research with a
-                public blog post, which I can easily find and refer to later. Hopefully other people will find these posts helpful, 
-                relevant, or interesting. I firmly believe that blogs are a two way conversation, so I welcome email and comments – as long as
-                they're on topic, more or less.
-            </p>
-
-            <h3>Fun facts📑</h3>
-            <ul>
-                <li>I love books (books stores drive me crazy)</li>
-                <li>My favorite food is pizza🍕</li>
-                <li>I love Rockets too!🚀 (I will build my own rocket soon)</li>
-                <li>My fav game is League of legends</li>
-            </ul>
-
-            <h5>Sign up to receive email updates!</h5>
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://lestersales.substack.com/embed" allowfullscreen></iframe>
-            </div>
-
-            <h3>Say hi</h3>
-            <p>Wanna chat? feel free to reach out!</p>
-            <ul>
-                <li>You can reach me at: lesters821@gmail.com</li>
-                <li>My least favorite social media twitter: <a href="https://twitter.com/@Lester_Sales42">@Lester_Sales42</a></li>
-                <li>My favorite social media platform: <a href="https://github.com/lester2020">github.com/lester2020</a></li>
-                <li>My linkedin:<a href="https://www.linkedin.com/in/lester-sales/">linkedin.com/in/lester-sales</a></li>
-            </ul>
-            
+    <%- include ("./partials/header") %>
+    <div class="homeImg">
+        <div class="homeDiv center">
+            <h1 class="titleMain">LESTER SALES</h1>
+            <h3>an electronics hobbyist passionate for innovative technology and digital content</h3>
         </div>
-    </main>
-    <br>
-    <br>
+        <div class="homeSouth">
+            <h4><a class="stealthLink subPmin padX0" href="#">Read More</a></h4>
+            <button class="smoothScrollBtn" type="button"><img src="/images/Down-Arrow-White.png" width="30"/></button>
+        </div>
+    </div>
 
+    <div class="container-fluid aboutMe" >
+        <div class="container aboutMe">
+            <div class="row rowPad" >
+                <div class="col-md-4">
+                    <img src="/images/profile01.jpg" class="circleImg"></img>
+                </div>
+                <div class="col-md-8">
+                    <p class="pad20">Welcome to my website. I am an electronics hobbyist,
+                        digital content creator, and a second year computer
+                        science student at the University of Guelph. In the
+                        past few years I have worked on many independent
+                        projects alongside my formal education. My goal is to develop
+                        innovative solutions in the multimedia and automation industries through my combined software and hardware experience.
+                        I have advanced knowledge in Java and C, experience designing custom electronic circuits/robotics,
+                        as well as building this website using responsive web technologies.
+                        Additionally, I am a hobbyist filmmaker and photographer, and have been sharing my stories on
+                        YouTube since 2012. I created this site to share my interests, as they evolve,
+                        and connect with like minded individuals.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<%- messages('messages', locals) %> -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 
 </html>
