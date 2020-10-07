@@ -8,7 +8,7 @@
 body .scrollN, body .scrollN:hover {
     font-size: 1em;
     color: white;
-    font-family: 'Gravity-Regular';
+    /* font-family: 'Gravity-Regular'; */
 }
 
 .navbar-toggler-icon {

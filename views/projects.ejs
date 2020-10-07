@@ -1,91 +1,21 @@
 <%- include ("./partials/head") %>
-<body>
-    <main class="page-content" aria-label="Content">
+    <body>
         <%- include ("./partials/header") %>
-        <div class="content">
-            <h3>Software Repository</h3>
-            <table class="table">
-                <thead class="thead-light">
-                  <tr>
-                    <th scope="col">Title</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Language</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a href="https://github.com/lesterSales/Smart-Egg-Incubator" target="_blank" rel="noopener noreferrer">Smart Egg-Incubator</a></td>
-                    <td>SMEGGI (Smart Egg-Incubator) for Poultries and Gamefowl</td>
-                    <td>C</td>
-                  </tr>
-                  <tr>
-                    <td><a href="http://" target="_blank" rel="noopener noreferrer">Twitter Bot</a> </td>
-                    <td>Twitter Bot that automatically DM every users who follows me and analyze data.</td>
-                    <td>JavaScript</td>
-                  </tr>
-                  <tr>
-                    <td><a href="https://github.com/lesterSales/Angular-Firebase-CRUD" target="_blank" rel="noopener noreferrer">Angular CRUD Application</a> </td>
-                    <td>Created a web based CRUD Application in Firebase and Angular</td>
-                    <td>TypeScript</td>
-                  </tr>
-                  <tr>
-                    <td><a href="https://github.com/lesterSales/Weather-App" target="_blank" rel="noopener noreferrer">Weather App</a> </td>
-                    <td>A simple web based weather App using Open weather API</td>
-                    <td>JavaScript</td>
-                  </tr>
-                  <tr>
-                    <td><a href="https://github.com/lesterSales/ecommerce-web-app" target="_blank" rel="noopener noreferrer">Online Shopping Store</a> </td>
-                    <td>A simple online store using Angular and Firebase with user Authentication and Authorazation</td>
-                    <td>TypeScript</td>
-                  </tr>
-                </tbody>
-              </table>
-        </div>
-        <div class="content">
-            <h1>Technology Stack</h1>
-            <p>MY WEBSITE ARCHITECTURE</p>
-            <div>
-                <div>
-                    <h3>Front-End</h3>
-                    <h6>REACT + BOOTSTRAP</h6>
-                    <ul>
-                        <li>Single page Web apps written in create-react-app</li>
-                    </ul>
-                </div>
+        <link rel="stylesheet" href="stylesheets/style.css">
 
-                <div>
-                    <h3>Backend Servers (non CPU-bound)</h3>
-                    <h6>NODEJS + EXPRESS</h6>
-                    <ul>
-                        <li>Express app for each service.</li>
-                        <li>Single thread event-driven architecture, good for simple services that are mostly waiting on I/O.</li>
-                    </ul>
-                </div>
+        <div class="homeImg container-fluid">
+            <div class="homeDiv center container">
+                <h1 class="titleMain cenX">SOFTWARE REPOSITORIES</h1>
 
-                <div>
-                    <h3>Database</h3>
-                    <h6>MONGODB + MONGOOSE</h6>
-                    <ul>
-                        <li>Storage for JWT identity and content.</li>
-                        <li>Mongoose is an object data modeling (ODM) library that provides a rigorous modeling environment for your data, enforcing structure as needed while still maintaining the flexibility that makes MongoDB powerful.</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3>Deployment</h3>
-                    <h6>HEROKU</h6>
-                    <ul>
-                        <li>Cloud platform for hosting web application.
-                        </li>
-                    </ul>
-                </div>
+                <div class="row rowBackSS"></div>
+                <h3 class="subTitle cenX padX0">WORKING ON IT...</h3>
             </div>
         </div>
-    </main>
-    <br>
-    <br>
+        <%- include ("./partials/footer") %>
 
-    <%- include ("./partials/footer") %>
-</body>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/scripts/main.js"></script>
+    </body>
 </html>

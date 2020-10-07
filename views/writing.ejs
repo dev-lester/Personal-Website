@@ -1,31 +1,21 @@
 <%- include ("./partials/head") %>
-<body>
-    <main class="page-content" aria-label="Content">
+    <body>
         <%- include ("./partials/header") %>
-        <div class="content">
-            <%- messages('messages', locals) %>
-            <h3>Writing</h3>
-            <div>
-                <% writings.forEach(writing => { %>
-                    <div class="mt-4">
-                        <div class="card-body">
-                            <h4 class="card-title writing-title"><a href="/writings/<%- writing.id %>"><%- writing.title %></a></h4>
-                            <span class="css-nani text-muted mb-2">
-                                <%- writing.createdAt.toDateString() %>
-                            </span>
-                            <hr>
-                            <div class="card-text mb-2">
-                                <%- writing.content.substring(0, 180) + "..."%>
-                            </div>
-                        </div>
-                    </div>
-                <% }) %>
+        <link rel="stylesheet" href="stylesheets/style.css">
+
+        <div class="homeImg container-fluid">
+            <div class="homeDiv center container">
+                <h1 class="titleMain cenX">WRITINGS</h1>
+
+                <div class="row rowBackSS"></div>
+                <h3 class="subTitle cenX padX0">COMING SOON..</h3>
             </div>
         </div>
-    </main>
-    <br>
-    <br>
-    <%- include ("./partials/footer") %>
-</body>
+        <%- include ("./partials/footer") %>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/scripts/main.js"></script>
+    </body>
 </html>

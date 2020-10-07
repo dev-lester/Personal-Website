@@ -1,6 +1,16 @@
 body, html {
     height: 100%;
     margin: 0;
+    font-weight: 500;
+}
+
+body .padtop0 {
+    padding-top: 0px;
+}
+
+body .padX0 {
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .center {
@@ -10,8 +20,14 @@ body, html {
     transform: translateX(-50%) translateY(-50%);
 } 
 
+.centerTitle {
+    text-align: center;
+    padding-bottom: 60px;
+} 
+
 .homeImg {
-    background-image: url("../images/IMG_02.jpg");
+    background-image: url("../images/IMG_06.jpg");
+    /* background-color: #282828; */
 
     height: 100%;
     background-position: center;
@@ -19,8 +35,12 @@ body, html {
     background-size: cover;
 }
 
+.subH3 {
+    font-size: 1.70rem;
+}
+
 .homeDiv {
-    font-family: "Gravity-Book";
+    /* font-family: "Gravity-Book"; */
     color: white;
 }
 
@@ -33,11 +53,26 @@ body, html {
     position: absolute;
     left: calc(50% - 54px);
     top: calc(100% - 120px);
+
 }
 
 .titleMain {
-    font-family: "Gravity-Regular";
+    /* font-family: "Gravity-Regular"; */
     letter-spacing: 20px;
+}
+
+
+.smoothScrollBtn {
+    color: white;
+    /* margin-top: -20px; */
+    position: relative;
+    border: none;
+    background: none;
+    font-size: 3em;
+}
+
+.smoothScrollBtn:focus {
+    outline: 0;
 }
 
 .stealthLink, .stealthLink:focus, .stealthLink:hover {
@@ -113,6 +148,7 @@ body, html {
 
 }
 
+
 @media (max-width: 991px) {
     .extraSpace {
         padding-top: 60px;
@@ -128,4 +164,121 @@ body, html {
         padding-top: 40px;
         padding-bottom: 40px;
     }
+}
+
+.centerBtn {
+    margin: 40px;
+    margin-bottom: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.softwareImg {
+    background-color: #282828;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.softwareDiv {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.leftTitle {
+    text-align: left;
+    vertical-align: middle;
+    line-height: 50px;
+    letter-spacing: 10px;
+    /* font-family: "Gravity-Book"; */
+    font-size: 2em;
+    padding-left: 50px;
+    padding-bottom: 40px;
+    color: white;
+}
+
+.tilePadWide {
+    padding: 40px;
+}
+
+.tilePadMin {
+    padding: 10px;
+}
+
+.white {
+    color: white;
+}
+
+.cenX {
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.tileDesc {
+    text-align: center;
+    padding: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: white;
+    /* font-family: "Gravity-Regular"; */
+}
+
+.centerLinks {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+
+}
+
+.centerLinks a {
+    color: gray;
+    /* font-family: "Gravity-Regular"; */
+    transition: 0.2s ease-in-out;
+}
+
+.centerLinks a:hover {
+    /* text-decoration: underline; */
+    color: white;
+}
+
+
+.centerLinks > li > a {
+    text-decoration: none;
+}
+
+.centerLinks .brText {
+    display: inline-block;
+    color: #42536d;
+}
+
+.electronicDesc  {
+    text-align: center;
+    padding: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    /* font-family: "Gravity-Regular"; */
+}
+
+.electronicsBack {
+    /* background-image: url("../images/IMG_1716.jpg"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.subPmin {
+    padding-left: 60px;
+    padding-right: 60px;
+    /* font-family: "Gravity-Regular"; */
+}
+
+.subTitle {
+    /* font-family: "Gravity-Regular"; */
+    letter-spacing: 10px;
+    padding-left: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 0px;
 }
