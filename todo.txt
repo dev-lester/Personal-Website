@@ -1,1 +1,7 @@
 #progress
+
+
+
+* render writing content
+* render projects in tables
+* add contact form

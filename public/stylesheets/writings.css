@@ -1,0 +1,45 @@
+.writing-content {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+}
+
+.writings-tileDate {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.writing-title {
+    color: white;
+}
+.writing-title a:hover {
+    color: rgb(116, 113, 113);
+}
+
+.writings {
+    display: flex;
+    justify-content: space-between;
+}
+
+.writings-date {
+    display: inline-block;
+    color: rgb(119, 119, 119);
+    font: 0.9rem / 1 system-ui;
+    margin-top: 0.4rem;
+    margin-bottom: 0.2rem;
+}
+
+.back-menu {
+    color: rgb(119, 119, 119);
+}
+
+.title-date {
+    display: block;
+    padding-bottom: .05px;
+    flex-wrap: wrap;
+}
