@@ -1,0 +1,16 @@
+.projects-content{
+    max-width: auto;
+    color: white;
+}
+
+.table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    color: white;
+}
+
+.th-title a{
+    color: white;
+}

@@ -1,17 +1,75 @@
 <%- include ("./partials/head") %>
     <body>
         <%- include ("./partials/header") %>
-        <link rel="stylesheet" href="stylesheets/style.css">
-
-        <div class="homeImg container-fluid">
-            <div class="homeDiv center container">
-                <h1 class="titleMain cenX">SOFTWARE REPOSITORIES</h1>
-
-                <div class="row rowBackSS"></div>
-                <h3 class="subTitle cenX padX0">WORKING ON IT..</h3>
+        <link rel="stylesheet" href="stylesheets/projects.css">
+        <div class="container-fluid softwareImg">
+            <div class="container softwareDiv projects-content">
+                <br>
+                <br>
+                <div style="overflow-x:auto;">
+                    <br>
+                    <!-- <h2>Software Repositories</h2> -->
+                    <br>
+                    <table class="table table-bordered">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Language</th>
+                            </tr>
+                        </thead>
+                        <tbody class="th-title">
+                            <tr>
+                                <td><a href="https://github.com/lesterSales/Smart-Egg-Incubator" target="_blank"
+                                        rel="noopener noreferrer">Smart Egg-Incubator</a></td>
+                                <td>SMEGGI (Smart Egg-Incubator) for Poultries and Gamefowl Using mobile application to monitor
+                                    the humidity and temperature of an incubator.</td>
+                                <td>C</td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://" target="_blank" rel="noopener noreferrer">Twitter Bot</a> </td>
+                                <td>Twitter Bot that automatically DM every users who follows me and analyze data.</td>
+                                <td>JavaScript</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/lesterSales/Angular-Firebase-CRUD" target="_blank"
+                                        rel="noopener noreferrer">Angular CRUD Application</a> </td>
+                                <td>Created a web based CRUD Application in Firebase and Angular</td>
+                                <td>TypeScript</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/lesterSales/Weather-App" target="_blank"
+                                        rel="noopener noreferrer">Weather App</a> </td>
+                                <td>A simple web based weather App using Open weather API</td>
+                                <td>JavaScript</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/lesterSales/ecommerce-web-app" target="_blank"
+                                        rel="noopener noreferrer">Online Shopping Store</a> </td>
+                                <td>A simple online store using Angular and Firebase with user Authentication and Authorazation
+                                </td>
+                                <td>TypeScript</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/lester2020" target="_blank" rel="noopener noreferrer">Asteroids
+                                        NeoWs: Near Earth Object Web Service</a> </td>
+                                <td>NeoWs (Near Earth Object Web Service) is a RESTful web service for near earth Asteroid
+                                    information. With NeoWs a user can: search for Asteroids based on their closest approach
+                                    date to Earth, lookup a specific Asteroid with its NASA JPL small body id, as well as browse
+                                    the overall data-set.
+                                </td>
+                                <td>JavaScript</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-        <%- include ("./partials/footer") %>
+        </div>
+        </div>
+    </div>
+                
+    <%- include ("./partials/footer") %>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
