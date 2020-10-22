@@ -12,6 +12,10 @@
     color: white;
 }
 
+.table td {
+    vertical-align: middle;
+}
+
 .th-title a{
     color: white;
 }
