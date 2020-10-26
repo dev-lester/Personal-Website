@@ -11,7 +11,13 @@
         <li> <a class="nav-link scrollN" href="/projects/">Projects</a></li> 
       </ul>
       <ul class="navbar-nav">
+        <% if (user) { %>
+        <li><a class="nav-link scrollN" href="/writings/create">Publish</a></li>
+        <li><a class="nav-link scrollN" href="/user/logout">Logout</a></li>
+        <% } else { %>
           <li><a class="nav-link scrollN" href="/contact">Contact</a></li>
+        <% } %>
+
       </ul>
     </div>
      </div>
