@@ -1,25 +1,25 @@
-<div class="wrapper">
-    <div class="header">
+<link rel="stylesheet" type="text/css" href="/stylesheets/nav.css"/>
+<nav class="navbar fixed-top navbar-expand-lg toggle-height" id="global-nav">
+    <div class="container">
+    <a class="navbar-brand scrollN" href="/">Lester Sales</a>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon custom-toggler"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li> <a class="nav-link scrollN" href="/writings/">Writings</a></li>
+        <li> <a class="nav-link scrollN" href="/projects/">Projects</a></li> 
+      </ul>
+      <ul class="navbar-nav">
         <% if (user) { %>
-            <div class="logout">
-                <ul class="login-list">
-                    <li class="login-info"><a href="/writings/create">Publish</a></li>
-                    <li class="login-info"><a href="/user/logout">Logout</a></li>
-                </ul>
-            </div>
+        <li><a class="nav-link scrollN" href="/writings/create">Publish</a></li>
+        <li><a class="nav-link scrollN" href="/user/logout">Logout</a></li>
         <% } else { %>
-            <div class="logout">
-    
-            </div>
+          <li><a class="nav-link scrollN" href="/contact">Contact</a></li>
         <% } %>
-        <br>
-        <img class="profile" src="images/profile.jpg" alt="Lester">
-        <h1 class="profile-name">Lester Sales</h1>
-        <div class="pure-menu pure-menu-horizontal pure-menu-scrollable">
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item one"><a href="/" class="pure-menu-link">Home</a></li>
-                <li class="pure-menu-item two"><a href="/writings" class="pure-menu-link">Writing</a></li>
-                <li class="pure-menu-item three"><a href="/projects" class="pure-menu-link">Projects</a></li>
-            </ul>
-        </div>
+
+      </ul>
     </div>
+     </div>
+</nav>
+<script type="text/javascript" src="/scripts/nav.js"></script>

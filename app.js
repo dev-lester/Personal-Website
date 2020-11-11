@@ -36,6 +36,7 @@ const projects = require('./routes/projects');
 const userRegister = require('./routes/user');
 const errorPage = require('./routes/404'); // 404 page
 const userLogin = require('./routes/login');
+const contact = require('./routes/contact');
 
 
 // Load view engine
@@ -94,9 +95,11 @@ app.get('*', (req, res, next) => {
 app.use('/', home);
 app.use('/writings', writings);
 app.use('/projects', projects);
+app.use('/contact', contact);
 app.use('/user', userRegister);
 app.use('/user', userLogin);
 app.use('*', errorPage); // 404 page
+
 
 // Handle unhandled promise rejections 
 const server = app.listen(PORT, () => {

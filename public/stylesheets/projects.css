@@ -1,0 +1,21 @@
+.projects-content{
+    max-width: 85%;
+    width: auto;
+    color: white;
+}
+
+.table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    color: white;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.th-title a{
+    color: white;
+}

@@ -7,7 +7,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "NODE_ENVIRONMENT=production node app",
+    "start": "NODE_ENVIRONMENT=development node app",
     "dev": "nodemon app"
   },
   "author": "",
