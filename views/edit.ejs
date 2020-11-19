@@ -1,23 +1,26 @@
 <%- include ("./partials/head") %>
-<main class="page-content" aria-label="Content">
-    <div class="content">
-        <h1>Edit writing</h1>
-        <form action="/writings/<%- writing.id %>?_method=PUT" method="POST">
-            <div class="form-group">
-                <label for="title">Title</label>
-                <input required value="<%- writing.title %>" type="text" name="title" id="title" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="description">Description</label>
-                <textarea name="description" id="description" class="form-control"><%= writing.description %></textarea>
-            </div>
-            <div class="form-group">
-                <label for="content">Content</label>
-                <textarea required value="" name="content" id="content" class="form-control"><%= writing.content %></textarea>
-            </div>
+<body>
+    <%- include ("./partials/header") %>
+    <link rel="stylesheet" href="stylesheets/writings.css">
+        <div class="container-fluid softwareImg">
+            <h1>Edit writing</h1>
+            <form action="/writings/<%- writing.id %>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input required value="<%- writing.title %>" type="text" name="title" id="title" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" class="form-control"><%= writing.description %></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <textarea required value="" name="content" id="content" class="form-control"><%= writing.content %></textarea>
+                </div>
+    
+                <a href="/writings/<%- writing.id %>" class="btn btn-secondary">Cancel</a>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+        </div>
 
-            <a href="/writings/<%- writing.id %>" class="btn btn-secondary">Cancel</a>
-            <button type="submit" class="btn btn-primary">Save</button>
-        </form>
-    </div>
-</main>
+</body>
