@@ -33,7 +33,7 @@ app.use(methodOverride('_method'));
 const home = require('./routes/home');
 const writings = require('./routes/writings');
 const projects = require('./routes/projects');
-const userRegister = require('./routes/user');
+// const userRegister = require('./routes/user');
 const errorPage = require('./routes/404'); // 404 page
 const userLogin = require('./routes/login');
 const contact = require('./routes/contact');
@@ -96,7 +96,7 @@ app.use('/', home);
 app.use('/writings', writings);
 app.use('/projects', projects);
 app.use('/contact', contact);
-app.use('/user', userRegister);
+// app.use('/user', userRegister);
 app.use('/user', userLogin);
 app.use('*', errorPage); // 404 page
 
